@@ -1,0 +1,14 @@
+:root {
+  --color-bg: 0 0% 0%;
+  --color-bg-muted: 0 0% 6%;
+
+  --color-text: 0 0% 100%;
+  --color-text-muted: 0 0% 60%;
+
+  --color-gradient-start: 338 94% 50%;
+  --color-gradient-end: 253 56% 38%;
+
+  --color-text-gradient-start: 0 0% 100%;
+  --color-text-gradient-middle: 338 89% 79%;
+  --color-text-gradient-end: 0 0% 100%;
+}
