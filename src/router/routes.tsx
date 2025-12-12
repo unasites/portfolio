@@ -3,8 +3,14 @@ import Projects from "../pages/Projects";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import FAQ from "../pages/FAQ";
+import type { ReactNode } from "react";
 
-import type { AppRoute } from "../types/AppRoute";
+ type AppRoute = {
+  path: string;
+  label: string;
+  element?: ReactNode;
+  showInNav?: boolean;
+};
 
 export const routes: AppRoute[] = [
   {
@@ -28,7 +34,7 @@ export const routes: AppRoute[] = [
   {
     path: "/faq",
     label: "FAQ",
-    element: <FAQ/>,
+    element: <FAQ />,
     showInNav: true,
   },
   {

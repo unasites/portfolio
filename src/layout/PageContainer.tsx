@@ -1,6 +1,10 @@
-import type { PageContainerProps } from "../types/PageContainerProps";
+import type { ReactNode } from "react";
 
-const PageContainer = ({children, className}: PageContainerProps) => {
+type PageContainerProps = {
+  children: ReactNode;
+  className?: string;
+};
+const PageContainer = ({ children, className }: PageContainerProps) => {
   return <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
 };
 
