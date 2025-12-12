@@ -1,12 +1,8 @@
-import Navbar from "../components/layout/Navbar";
+import { RouterProvider } from "react-router-dom";
+import { router } from "../router";
 
 const App = () => {
-  return (
-    <div className="min-h-screen ">
-        <Navbar/>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">test</div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
