@@ -1,5 +1,9 @@
 const App = () => {
-  return <div>Test</div>;
+  return (
+    <div className="min-h-screen ">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">test</div>
+    </div>
+  );
 };
 
 export default App;
