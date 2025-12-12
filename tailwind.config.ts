@@ -19,6 +19,9 @@ export default {
         "text-gradient":
           "linear-gradient(90deg, hsl(var(--color-text-gradient-start)), hsl(var(--color-text-gradient-middle)), hsl(var(--color-text-gradient-end)))",
       },
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+      },
     },
   },
   plugins: [],

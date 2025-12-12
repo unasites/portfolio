@@ -11,4 +11,6 @@
   --color-text-gradient-start: 0 0% 100%;
   --color-text-gradient-middle: 338 89% 79%;
   --color-text-gradient-end: 0 0% 100%;
+
+  --font-sans: "Onest", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }

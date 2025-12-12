@@ -7,4 +7,5 @@
 body {
   background-color: hsl(var(--color-bg));
   color: hsl(var(--color-text));
+  font-family: var(--font-sans);
 }
