@@ -1,8 +1,8 @@
 @import "./tokens.css";
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 body {
-  @apply m-0;
   background-color: hsl(var(--color-bg));
   color: hsl(var(--color-text));
   font-family: var(--font-sans);
