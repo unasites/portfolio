@@ -15,7 +15,7 @@ export default {
       },
       backgroundImage: {
         "primary-gradient":
-          "linear-gradient(90deg, hsl(var(--color-gradient-start)), hsl(var(--color-gradient-end)))",
+          "linear-gradient(90deg, hsl(var(--color-gradient-end)), hsl(var(--color-gradient-start)))",
         "text-gradient":
           "linear-gradient(90deg, hsl(var(--color-text-gradient-start)), hsl(var(--color-text-gradient-middle)), hsl(var(--color-text-gradient-end)))",
       },
