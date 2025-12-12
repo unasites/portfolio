@@ -4,14 +4,12 @@ import PageContainer from "./PageContainer";
 
 const MainLayout = () => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main>
-        <PageContainer>
+      <main className="flex flex-1">
           <Outlet />
-        </PageContainer>
       </main>
-    </>
+    </div>
   );
 };
 
