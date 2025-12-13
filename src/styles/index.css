@@ -7,3 +7,24 @@ body {
   color: hsl(var(--color-text));
   font-family: var(--font-sans);
 }
+
+
+
+/*TODO Choose colors for scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--color-gradient-end)) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--color-gradient-end));
+  border-radius: 999px;
+} */

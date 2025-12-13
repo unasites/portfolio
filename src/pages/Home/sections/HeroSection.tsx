@@ -4,7 +4,10 @@ import PageContainer from "@/layout/PageContainer";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex w-full h-full items-center justify-center overflow-hidden">
+    <section
+      className="relative flex w-full min-h-[calc(100vh-64px)]
+ items-center justify-center overflow-hidden"
+    >
       <PageContainer
         className="
           relative
@@ -22,12 +25,7 @@ const HeroSection = () => {
               lg:h-[220%] lg:w-[220%]
             "
           >
-            <Orb
-              hoverIntensity={0.5}
-              rotateOnHover
-              hue={0}
-              forceHoverState={false}
-            />
+            <Orb hoverIntensity={0.5} rotateOnHover hue={0} forceHoverState={false} />
           </div>
         </div>
 
@@ -47,8 +45,8 @@ const HeroSection = () => {
         </div>
 
         <p className="max-w-xl text-sm sm:text-base text-text-muted">
-          UNA is a site that helps you create powerful websites designed to work
-          for you and drive your growth.
+          UNA is a site that helps you create powerful websites designed to work for you and drive
+          your growth.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
