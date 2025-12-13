@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "hsl(var(--color-bg))",
-        "bg-muted": "hsl(var(--color-bg-muted))",
-        text: "hsl(var(--color-text))",
-        "text-muted": "hsl(var(--color-text-muted))",
+        bg: "hsl(var(--color-bg) / <alpha-value>)",
+        "bg-muted": "hsl(var(--color-bg-muted) / <alpha-value>)",
+        text: "hsl(var(--color-text) / <alpha-value>)",
+        "text-muted": "hsl(var(--color-text-muted) / <alpha-value>)",
         gradient: {
-          start: "hsl(var(--color-gradient-start))",
-          end: "hsl(var(--color-gradient-end))",
+          start: "hsl(var(--color-gradient-start) / <alpha-value>)",
+          end: "hsl(var(--color-gradient-end) / <alpha-value>)",
         },
       },
       backgroundImage: {
