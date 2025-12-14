@@ -6,6 +6,7 @@ interface OrbProps {
   hoverIntensity?: number;
   rotateOnHover?: boolean;
   forceHoverState?: boolean;
+  scale?: number;
 }
 
 export const Orb = ({
@@ -13,6 +14,7 @@ export const Orb = ({
   hoverIntensity = 0.2,
   rotateOnHover = true,
   forceHoverState = false,
+  scale = 2.0,
 }: OrbProps) => {
   const ctnDom = useRef<HTMLDivElement>(null);
 
@@ -30,6 +32,7 @@ export const Orb = ({
   const frag = /* glsl */ `
     precision highp float;
 
+    uniform float scale;
     uniform float iTime;
     uniform vec3 iResolution;
     uniform float hue;
@@ -155,7 +158,7 @@ export const Orb = ({
     vec4 mainImage(vec2 fragCoord) {
       vec2 center = iResolution.xy * 0.5;
       float size = min(iResolution.x, iResolution.y);
-      vec2 uv = (fragCoord - center) / size * 2.0;
+      vec2 uv = (fragCoord - center) / size * scale;
       
       float angle = rot;
       float s = sin(angle);
@@ -189,6 +192,7 @@ export const Orb = ({
       vertex: vert,
       fragment: frag,
       uniforms: {
+        scale: { value: scale },
         iTime: { value: 0 },
         iResolution: {
           value: new Vec3(gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height),
@@ -215,7 +219,7 @@ export const Orb = ({
         gl.canvas.height,
         gl.canvas.width / gl.canvas.height
       );
-    }
+    };
     window.addEventListener("resize", resize);
     resize();
 
@@ -258,6 +262,7 @@ export const Orb = ({
       program.uniforms.iTime.value = t * 0.001;
       program.uniforms.hue.value = hue;
       program.uniforms.hoverIntensity.value = hoverIntensity;
+      program.uniforms.scale.value = scale;
 
       const effectiveHover = forceHoverState ? 1 : targetHover;
       program.uniforms.hover.value += (effectiveHover - program.uniforms.hover.value) * 0.1;
@@ -279,7 +284,7 @@ export const Orb = ({
       container.removeChild(gl.canvas);
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-  }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
+  }, [hue, hoverIntensity, rotateOnHover, forceHoverState,scale]);
 
   return <div ref={ctnDom} className="w-full h-full" />;
 };

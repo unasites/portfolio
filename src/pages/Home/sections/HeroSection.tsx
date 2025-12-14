@@ -1,14 +1,16 @@
 import Orb from "@/components/effects/OrbEffect";
 import Button from "@/components/ui/Button/Button";
-import PageContainer from "@/layout/PageContainer";
-
 const HeroSection = () => {
   return (
     <section
       className="relative flex w-full min-h-[calc(100vh-64px)]
- items-center justify-center overflow-hidden"
+ items-center justify-center "
     >
-      <PageContainer
+      <div className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none">
+          <Orb hoverIntensity={0.5} rotateOnHover hue={0} forceHoverState={false} scale={1.665} />
+      </div>
+
+      <div
         className="
           relative
           flex flex-col items-center text-center
@@ -16,19 +18,6 @@ const HeroSection = () => {
           py-16 sm:py-20 lg:py-28
         "
       >
-        <div className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none">
-          <div
-            className="
-              h-[140%] w-[140%]
-              sm:h-[160%] sm:w-[160%]
-              md:h-[180%] md:w-[180%]
-              lg:h-[220%] lg:w-[220%]
-            "
-          >
-            <Orb hoverIntensity={0.5} rotateOnHover hue={0} forceHoverState={false} />
-          </div>
-        </div>
-
         <div className="flex flex-col items-center">
           <h1 className="font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             Let&apos;s build.
@@ -55,7 +44,7 @@ const HeroSection = () => {
             Contact us
           </Button>
         </div>
-      </PageContainer>
+      </div>
     </section>
   );
 };
