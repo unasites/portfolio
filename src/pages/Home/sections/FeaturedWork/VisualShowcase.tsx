@@ -1,6 +1,6 @@
-import strenx from "@/assets/VisualShowcase/strenx.png";
-import unaOld from "@/assets/VisualShowcase/una-old.png";
-import white from "@/assets/VisualShowcase/white.png";
+// import strenx from "@/assets/VisualShowcase/strenx.png";
+// import unaOld from "@/assets/VisualShowcase/una-old.png";
+// import white from "@/assets/VisualShowcase/white.png";
 
 type ShowcaseImage = {
   src: string;
@@ -11,14 +11,14 @@ type ShowcaseImage = {
 };
 
 const images: ShowcaseImage[] = [
-  { src: strenx, rotate: 0, x: "14%", y: "-8%", z: 3 },
-  { src: unaOld, rotate: -6, x: "0%", y: "-20%", z: 2 },
-  { src: white, rotate: 4, x: "8%", y: "24%", z: 1 },
+  { src: "http://placehold.co/700x520", rotate: 0, x: "0%", y: "-8%", z: 3 },
+  { src: "http://placehold.co/700x520", rotate: -15, x: "60%", y: "30%", z: 2 },
+  { src: "http://placehold.co/700x520", rotate: 15, x: "60%", y: "-30%", z: 1 },
 ];
 
 const VisualShowcase = () => {
   return (
-    <div className="relative h-[520px] w-[900px]">
+    <div className="relative h-130 w-225">
       {images.map((img, index) => (
         <img
           key={index}
@@ -35,12 +35,12 @@ const VisualShowcase = () => {
             absolute
             left-1/2
             top-1/2
-            h-[500px]
-            w-[700px]
+            h-130
+            w-175
             -translate-x-1/2
             -translate-y-1/2
             rounded-xl
-            shadow-2xl
+            shadow-[0_0_100px_16px_rgba(26,26,26,0.5)]
             will-change-transform
           "
         />
