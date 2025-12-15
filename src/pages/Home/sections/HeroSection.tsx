@@ -3,11 +3,11 @@ import Button from "@/components/ui/Button/Button";
 const HeroSection = () => {
   return (
     <section
-      className="relative flex w-full min-h-[calc(100vh-64px)]
+      className="relative z-10 flex w-full min-h-[calc(100vh-64px)]
  items-center justify-center "
     >
-      <div className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none">
-          <Orb hoverIntensity={0.5} rotateOnHover hue={0} forceHoverState={false} scale={1.665} />
+      <div className="absolute -top-[50vh] -bottom-[50vh] left-0 right-0 z-0 flex items-center justify-center pointer-events-none">
+        <Orb hoverIntensity={0.5} rotateOnHover hue={0} forceHoverState={false} scale={3.2} />
       </div>
 
       <div
