@@ -1,24 +1,56 @@
-// import strenx from "@/assets/VisualShowcase/strenx.png";
-// import unaOld from "@/assets/VisualShowcase/una-old.png";
-// import white from "@/assets/VisualShowcase/white.png";
+import strenx from "@/assets/VisualShowcase/strenx.png";
+import unaOld from "@/assets/VisualShowcase/una-old.png";
+import white from "@/assets/VisualShowcase/white.png";
 
 type ShowcaseImage = {
   src: string;
-  rotate: number;
-  x: string;
-  y: string;
   z: number;
+  className: string;
 };
 
 const images: ShowcaseImage[] = [
-  { src: "http://placehold.co/700x520", rotate: 0, x: "0%", y: "-8%", z: 3 },
-  { src: "http://placehold.co/700x520", rotate: -15, x: "60%", y: "30%", z: 2 },
-  { src: "http://placehold.co/700x520", rotate: 15, x: "60%", y: "-30%", z: 1 },
+  {
+    src: strenx,
+    z: 30,
+    className: `
+      translate-x-[0%]
+      translate-y-[0%]
+      rotate-0
+
+      xl:translate-y-[0%]
+    `,
+  },
+  {
+    src: unaOld,
+    z: 10,
+    className: `
+      translate-x-[40%]
+      translate-y-[-30%]
+      rotate-15
+
+      xl:translate-x-[0%]
+      xl:translate-y-[0%]
+      xl:-rotate-[15deg]
+    `,
+  },
+  {
+    src: white,
+    z: 20,
+    className: `
+      translate-x-[40%]
+      translate-y-[50%]
+      -rotate-15
+
+      xl:translate-x-[0%]
+      xl:translate-y-[0%]
+      xl:rotate-[15deg]
+    `,
+  },
 ];
 
 const VisualShowcase = () => {
   return (
-    <div className="relative h-130 w-225">
+    <div className="relative  xl:w-225 h-70 sm:h-100 md:h-130 xl:h-160 w-screen sm:w-150  md:w-160 px-6">
       {images.map((img, index) => (
         <img
           key={index}
@@ -26,23 +58,28 @@ const VisualShowcase = () => {
           alt=""
           loading="lazy"
           decoding="async"
-          style={{
-            transform: `translate(${img.x}, ${img.y})`,
-            rotate: `${img.rotate}deg`,
-            zIndex: img.z,
-          }}
-          className="
+          style={{ zIndex: img.z }}
+          className={`
             absolute
-            left-1/2
-            top-1/2
-            h-130
-            w-175
-            -translate-x-1/2
-            -translate-y-1/2
+            xl:left-1/2
+            xl:top-1/2
+            xl:-translate-x-1/2
+            xl:-translate-y-1/2
+            h-auto
+            w-[calc(100%-3rem)]
+
+            sm:h-110
+            sm:w-150
+            md:h-120
+            md:w-160
+        
             rounded-xl
-            shadow-[0_0_100px_16px_rgba(26,26,26,0.5)]
+            transition-transform
+            duration-500
+            ease-out
             will-change-transform
-          "
+            ${img.className}
+          `}
         />
       ))}
     </div>

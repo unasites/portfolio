@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative z-10 flex w-full min-h-[calc(100vh-64px)]
- items-center justify-center px-5 lg:px-0 "
+ items-center justify-center px-6 lg:px-0 "
     >
       <div className="hidden absolute -top-[50vh] -bottom-[50vh] left-0 right-0 z-0 lg:flex items-center justify-center pointer-events-none">
         <Orb hoverIntensity={0.5} rotateOnHover hue={0} forceHoverState={false} scale={3.2} />
