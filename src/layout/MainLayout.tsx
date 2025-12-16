@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
       <main className="flex flex-1">
           <Outlet />
