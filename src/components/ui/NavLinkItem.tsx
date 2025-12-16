@@ -4,11 +4,13 @@ import clsx from "clsx";
 type NavLinkItemProps = {
   to: string;
   label: string;
+  onClick?: () => void;
 };
 
-const NavLinkItem = ({ to, label }: NavLinkItemProps) => {
+const NavLinkItem = ({ to, label, onClick }: NavLinkItemProps) => {
   return (
     <NavLink
+      onClick={onClick}
       to={to}
       end={to === "/"}
       className={({ isActive }) =>

@@ -1,13 +1,13 @@
 import { routes } from "../../router/routes";
 import NavLinkItem from "../ui/NavLinkItem";
 
-const NavLinks = () => {
+const NavLinks = ({ onClick }: { onClick?: () => void }) => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex flex-col lg:flex-row items-center gap-6">
       {routes
         .filter((route) => route.showInNav)
         .map((route) => (
-          <NavLinkItem key={route.path} to={route.path} label={route.label} />
+          <NavLinkItem onClick={onClick} key={route.path} to={route.path} label={route.label} />
         ))}
     </div>
   );
