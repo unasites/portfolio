@@ -1,5 +1,6 @@
 import Orb from "@/components/effects/OrbEffect";
 import Button from "@/components/ui/Button/Button";
+import ButtonsContainer from "@/components/ui/Button/ButtonsContainer";
 const HeroSection = () => {
   return (
     <section
@@ -39,12 +40,12 @@ const HeroSection = () => {
           your growth.
         </p>
 
-        <div className="flex flex-col sm:flex-row  max-w-full w-full lg:max-w-none items-center gap-4 justify-center">
+        <ButtonsContainer className={""}>
           <Button size="lg">Get started</Button>
           <Button size="lg" variant="secondary">
             Contact us
           </Button>
-        </div>
+        </ButtonsContainer>
       </div>
     </section>
   );

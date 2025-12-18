@@ -22,6 +22,18 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)"],
       },
+
+      keyframes: {
+        carousel: {
+          "0%, 25%": { transform: "translateX(0)" },
+          "30%, 55%": { transform: "translateX(-100%)" },
+          "60%, 85%": { transform: "translateX(-200%)" },
+          "90%, 100%": { transform: "translateX(-300%)" },
+        },
+      },
+      animation: {
+        carousel: "carousel 10s infinite linear",
+      },
     },
   },
   plugins: [],

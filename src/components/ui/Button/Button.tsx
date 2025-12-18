@@ -20,7 +20,7 @@ const Button = ({
   return (
     <button
       className={clsx(
-        "inline-flex items-center justify-center w-full md:w-auto rounded-full font-medium transition-all cursor-pointer max-w-xs",
+        "inline-flex items-center justify-center w-full md:w-auto rounded-full font-normal transition-all cursor-pointer max-w-xs",
 
         size === "sm" && "px-4 py-1.5 text-sm",
         size === "md" && "px-6 py-2 text-sm",

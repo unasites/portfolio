@@ -1,3 +1,4 @@
+import CarouselSection from "./sections/CarouselSection/CarouselSection";
 import FeaturedWorkSection from "./sections/FeaturedWork/FeaturedWorkSection";
 import HeroSection from "./sections/HeroSection";
 import MeetOurTeam from "./sections/MeetOurTeam/MeetOurTeam";
@@ -8,6 +9,7 @@ const Home = () => {
       <HeroSection />
       <FeaturedWorkSection />
       <MeetOurTeam/>
+      <CarouselSection/>
     </div>
   );
 };
