@@ -13,8 +13,8 @@ const MeetOurTeam = () => {
           Meet our <span className="bg-primary-gradient font-bold bg-clip-text text-transparent">team</span>
         </h2>
 
-        <PageContainer className="flex-1 flex items-center justify-center w-full">
-          <div className="flex flex-wrap w-full xl:gap-20 justify-center  gap-12">
+        <PageContainer className=" max-w-none flex-1 flex items-center justify-center w-full">
+          <div className="flex flex-wrap w-full xl:gap-20 items-center justify-center  gap-12">
             {developers.map((dev) => (
               <Developer key={dev.name} data={dev} />
             ))}
