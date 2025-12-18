@@ -14,7 +14,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="h-auto md:h-80 w-screen py-10 md:py-20 flex flex-col justify-between gap-10 md:gap-0">
+    <footer className="h-auto md:h-60 w-screen py-10 md:pt-20 flex flex-col justify-between gap-10 md:gap-0">
       <div className="flex flex-col w-full items-center">
         <Logo size={120} />
       </div>
