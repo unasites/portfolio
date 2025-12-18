@@ -1,3 +1,4 @@
+import { cn } from "@/utils/cn";
 import clsx from "clsx";
 import type { ButtonHTMLAttributes } from "react";
 import Arrow from "../../icons/Arrow";
@@ -19,18 +20,17 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={clsx(
-        "inline-flex items-center justify-center w-full md:w-auto rounded-full font-normal transition-all cursor-pointer max-w-xs",
+      className={cn(
+        clsx(
+          "inline-flex items-center justify-center w-full md:w-auto rounded-full font-normal transition-all cursor-pointer max-w-xs",
 
-        size === "sm" && "px-4 py-1.5 text-sm",
-        size === "md" && "px-6 py-2 text-sm",
-        size === "lg" && "px-8 py-3 text-base",
+          size === "sm" && "px-4 py-1.5 text-sm",
+          size === "md" && "px-6 py-2 text-sm",
+          size === "lg" && "px-8 py-3 text-base",
 
-        variant === "primary" &&
-          "bg-primary-gradient text-text hover:opacity-90",
-        variant === "secondary" &&
-          "bg-transparent text-text-muted hover:text-text gap-2",
-
+          variant === "primary" && "bg-primary-gradient text-text hover:opacity-90",
+          variant === "secondary" && "bg-transparent text-text-muted hover:text-text gap-2"
+        ),
         className
       )}
       {...props}

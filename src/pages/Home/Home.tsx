@@ -1,6 +1,7 @@
+import BrandValueSection from "./sections/BrandValueSection/BrandValueSection";
 import CarouselSection from "./sections/CarouselSection/CarouselSection";
 import FeaturedWorkSection from "./sections/FeaturedWork/FeaturedWorkSection";
-import HeroSection from "./sections/HeroSection";
+import HeroSection from "./sections/HeroSection/HeroSection";
 import IdentitySection from "./sections/IdentitySection/IdentitySection";
 import MeetOurTeam from "./sections/MeetOurTeam/MeetOurTeam";
 
@@ -12,6 +13,7 @@ const Home = () => {
       <MeetOurTeam/>
       <CarouselSection/>
       <IdentitySection/>
+      <BrandValueSection/>
     </div>
   );
 };

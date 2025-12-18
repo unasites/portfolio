@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useState, useEffect } from "react";
 
 const Carousel = () => {
@@ -36,9 +37,10 @@ const Carousel = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`h-2 w-2 rounded-full transition-colors ${
+            className={clsx(
+              "h-2 w-2 rounded-full transition-colors",
               index === currentIndex ? "bg-white w-4" : "bg-white/50 w-2"
-            }`}
+            )}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
