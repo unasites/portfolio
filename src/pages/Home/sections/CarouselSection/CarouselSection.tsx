@@ -6,9 +6,9 @@ import Button from "@/components/ui/Button/Button";
 const CarouselSection = () => {
   return (
     <section className="flex justify-between flex-col gap-6 text-center py-20 xl:flex-row items-center min-h-screen">
-     <div className="px-6">
-         <Carousel />
-     </div>
+      <div className="px-6">
+        <Carousel />
+      </div>
       <PageContainer className="flex xl:justify-end flex-col  gap-10">
         <h2 className="max-w-lg text-5xl xl:text-6xl font-normal bg-text-gradient bg-clip-text text-transparent">
           Discover the work behind our vision

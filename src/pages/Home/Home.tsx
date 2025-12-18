@@ -1,6 +1,7 @@
 import CarouselSection from "./sections/CarouselSection/CarouselSection";
 import FeaturedWorkSection from "./sections/FeaturedWork/FeaturedWorkSection";
 import HeroSection from "./sections/HeroSection";
+import IdentitySection from "./sections/IdentitySection/IdentitySection";
 import MeetOurTeam from "./sections/MeetOurTeam/MeetOurTeam";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <FeaturedWorkSection />
       <MeetOurTeam/>
       <CarouselSection/>
+      <IdentitySection/>
     </div>
   );
 };

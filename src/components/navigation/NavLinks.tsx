@@ -1,5 +1,5 @@
 import { routes } from "../../router/routes";
-import NavLinkItem from "../ui/NavLinkItem";
+import NavLinkItem from "./NavLinkItem";
 
 const NavLinks = ({ onClick }: { onClick?: () => void }) => {
   return (
