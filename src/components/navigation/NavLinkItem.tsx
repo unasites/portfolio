@@ -14,7 +14,10 @@ const NavLinkItem = ({ to, label, onClick }: NavLinkItemProps) => {
       to={to}
       end={to === "/"}
       className={({ isActive }) =>
-        clsx("text-base font-normal", isActive ? "text-text" : "text-text-muted")
+        clsx(
+          "text-base font-normal hover:text-text transition-all duration-300",
+          isActive ? "text-text" : "text-text-muted"
+        )
       }
     >
       {label}

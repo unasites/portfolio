@@ -3,7 +3,7 @@ import NavLinkItem from "./NavLinkItem";
 
 const NavLinks = ({ onClick }: { onClick?: () => void }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-6">
+    <div className="flex flex-col lg:flex-row items-center gap-8">
       {routes
         .filter((route) => route.showInNav)
         .map((route) => (

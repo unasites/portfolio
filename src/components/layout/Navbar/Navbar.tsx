@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="w-full relative z-50">
-      <div className="px-3 sm:px-4 lg:px-6 h-16 flex items-center justify-between">
+      <div className="p-8 flex items-center justify-between">
         <Logo size={60} />
         <div className="hidden lg:block">
           <NavLinks />
